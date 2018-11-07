@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>java-web</groupId>
+  <artifactId>de.marko.pentest</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>vulnerable-endpoint</module>
+    <module>rogue-endpoint</module>
+  </modules>
+
+  <properties>
+    <jdk.version>1.8</jdk.version>
+    <!-- logging -->
+    <slf4j.version>1.7.22</slf4j.version>
+    <!-- Vertx -->
+    <vertx.version>3.4.2</vertx.version>
+    <!-- Testing -->
+    <testng.version>6.9.8</testng.version>
+    <!-- vulnerable libs -->
+    <jackson.version>2.8.3</jackson.version>
+    <json.io.version>4.9.12</json.io.version>
+    <spring.version>4.3.10.RELEASE</spring.version>
+    <xalan.version>2.7.2</xalan.version>
+    <!-- database -->
+    <org.hibernate.version>5.2.6.Final</org.hibernate.version>
+    <dbcp.version>2.1.1</dbcp.version>
+  </properties>
+
+  <dependencies>
+    <!-- Logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+
+    <!-- Vertx -->
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-core</artifactId>
+      <version>${vertx.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-web</artifactId>
+      <version>${vertx.version}</version>
+    </dependency>
+
+    <!-- Testing -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
